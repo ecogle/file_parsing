@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="tw-epermits-unit" transaction-type="RESOURCE_LOCAL">
+
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+		<non-jta-data-source>jdbc/OCSDS</non-jta-data-source>
+
+		<!-- Classes from shared tw-common-vaadin -->
+		<class>gov.doi.tw.common.backend.model.entities.BaEmployees</class>
+		<class>gov.doi.tw.common.backend.model.entities.BaEmployeeRole</class>
+		<class>gov.doi.tw.common.backend.model.entities.BaContactAssocs</class>
+		<class>gov.doi.tw.common.backend.model.entities.BaContactAssocsAttribs</class>
+		<class>gov.doi.tw.common.backend.model.entities.BaContactEmployees</class>
+		<class>gov.doi.tw.common.backend.model.entities.BaContactExternalPersonView</class>
+		<class>gov.doi.tw.common.backend.model.entities.BaContactAddresses</class>
+		<class>gov.doi.tw.common.backend.model.entities.BusinessAssociates</class>
+		<class>gov.doi.tw.common.backend.model.entities.BusinessAssociatesRequest</class>
+		<class>gov.doi.tw.common.backend.model.entities.BaAddressRequest</class>
+		<class>gov.doi.tw.common.backend.model.entities.BaUserAccounts</class>
+		<class>gov.doi.tw.common.backend.model.entities.BaAccountSecInfo</class>
+		<class>gov.doi.tw.common.backend.model.entities.EdmsAttachments</class>
+		<class>gov.doi.tw.common.backend.model.entities.EdmsDocSubtypesMV</class>
+		<class>gov.doi.tw.common.backend.model.entities.EdmsDocTypesMV</class>
+		<class>gov.doi.tw.common.backend.model.entities.EntitlementGroup</class>
+		<class>gov.doi.tw.common.backend.model.entities.EntitlementGroupMember</class>
+		<class>gov.doi.tw.common.backend.model.entities.EntitlementGroupRole</class>
+		<class>gov.doi.tw.common.backend.model.entities.EntitlementRole</class>
+		<class>gov.doi.tw.common.backend.model.entities.ExternalPersonView</class>
+		<class>gov.doi.tw.common.backend.model.entities.ExtUserEntitlementsView</class>
+		<class>gov.doi.tw.common.backend.model.entities.ExtUserSecurityQuestions</class>
+		<class>gov.doi.tw.common.backend.model.entities.SubAttachmentTemplates</class>
+		<class>gov.doi.tw.common.backend.model.entities.SubSignatureTemplates</class>
+		<class>gov.doi.tw.common.backend.model.entities.TwPersonCompanyView</class>
+		<class>gov.doi.tw.common.backend.model.entities.TwUserAccountsView</class>
+		<class>gov.doi.tw.common.backend.model.entities.SubAttachments</class>
+		<class>gov.doi.tw.common.backend.model.entities.BoreholesView</class>
+		<class>gov.doi.tw.common.backend.model.entities.LeasesView</class>
+		<class>gov.doi.tw.common.backend.model.entities.LeaseOwnersOperatorsView</class>
+		<class>gov.doi.tw.common.backend.model.entities.LeaseBlockView</class>
+
+		<class>gov.doi.tw.common.backend.model.entities.PplMastersView</class>
+		<class>gov.doi.tw.common.backend.model.entities.PplAsbuiltsView</class>
+		<class>gov.doi.tw.common.backend.model.entities.PplAsbuiltsViewPK</class>
+		<class>gov.doi.tw.common.backend.model.entities.PlatformStructuresView</class>
+		<class>gov.doi.tw.common.backend.model.entities.PlatformMastersView</class>
+		<class>gov.doi.tw.common.backend.model.entities.PlatformLocationsView</class>
+
+		<class>gov.doi.tw.common.backend.model.review.entities.SubReviewDecisions</class>
+		<class>gov.doi.tw.common.backend.model.review.entities.SubReviewPerformers</class>
+		<class>gov.doi.tw.common.backend.model.review.entities.SubReviews</class>
+		<class>gov.doi.tw.common.backend.model.review.entities.SubReviewComments</class>
+		<class>gov.doi.tw.common.backend.model.review.entities.SubReviewStatus</class>
+		<class>gov.doi.tw.common.backend.model.review.entities.Mitigation</class>
+		<class>gov.doi.tw.common.backend.model.review.entities.RevwAppliedMitigations</class>
+		<class>gov.doi.tw.common.backend.model.review.entities.RevwAppliedMitigtnParams</class>
+		<class>gov.doi.tw.common.backend.model.review.entities.MitigationClass</class>
+		<class>gov.doi.tw.common.backend.model.review.entities.ReviewMitigationClass</class>
+		<class>gov.doi.tw.common.backend.model.review.entities.MitigationParameters</class>
+		<class>gov.doi.tw.common.backend.model.review.entities.MitigationParameterNames</class>
+		<class>gov.doi.tw.common.backend.model.review.entities.MitigationParameterValue</class>
+		<class>gov.doi.tw.common.backend.model.review.entities.ReviewDetailTemplate</class>
+		<class>gov.doi.tw.common.backend.model.review.entities.ReviewType</class>
+		<class>gov.doi.tw.common.backend.model.review.entities.SubReviewTypeXref</class>
+		<class>gov.doi.tw.common.backend.model.review.entities.ReviewPerformers</class>
+		<class>gov.doi.tw.common.backend.model.review.entities.SubReviewDetails</class>
+		<class>gov.doi.tw.common.backend.model.review.entities.PlansRfi</class>
+		
+
+		<class>gov.doi.tw.common.backend.model.entities.CompanyView</class>
+
+		<class>gov.doi.tw.common.backend.model.entities.CplyRegulationAuthorities</class>
+
+		<class>gov.doi.tw.common.backend.model.entities.ApplSystemParameter</class>
+		<class>gov.doi.tw.common.backend.model.entities.ApplSystemParameterPK</class>
+		<class>gov.doi.tw.common.backend.model.entities.ApplUserSessionParms</class>
+		<class>gov.doi.tw.common.backend.model.entities.ApplUserSessionParmsPK</class>
+		<class>gov.doi.tw.common.backend.model.entities.SubReports</class>
+		<class>gov.doi.tw.common.backend.model.entities.AllBlockGeograph</class>
+		<class>gov.doi.tw.common.backend.model.entities.Holiday</class>
+
+
+
+		<!-- End classes from shared tw-common-vaadin -->
+
+		<!-- RTable Entities -->
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RBaAcctLockReasonType</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RAddressCategoryTypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RBaAcctSecretQuestion</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RSubTypeCodes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RRegionCodes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.ROsrpFormatTypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.ROsrpCoverageTypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RNotificationTypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RSubStatusCodes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RSkimmerTypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.ROsroContractCodes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RBaServiceTypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RBaContactFunctionTypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RBoomTypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RVesselTypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RChemicalTypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RStorageUnitTypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RWildlifeRehabTypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RPwrUnitTypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RProductCd</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RChemAppTypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RWcdLocCd</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.ROsrpFacilityType</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.ROsrpContractorTypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RPostalStCode</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RCorePlanCmpntTypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.ROsrpEquipCatgCds</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RAuditResultCodes</class>
+
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RRevwNoFrthrCodes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RRevwTxtReqCodes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RPlanAreaCodes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RRevwObjectTypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RRevwObjectSubtypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RReviewTypeClassCodes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RReviewerDecisions</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RReviewerRoleTypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RVerfResultCodes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RSubReviewStatusCodes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RRfiClassType</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RTier2TstOutcome</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RInspMitTypeCodes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RMitActualIntervalUnitCds</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RMitgtnSvrtyCodes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RSources</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RQuestionRespCodes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RReviewPerformerTypes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.ROsrpWcdCategoryRatings</class>
+
+
+		<class>gov.doi.tw.common.backend.model.entities.osrp.rtable.ROsrpExerciseTypes</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.rtable.ROsrpScenarioTypes</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.rtable.ROsrpGovRoleTypes</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.rtable.ROsrpTrainingGroups</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.rtable.ROsrpAuditModes</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.rtable.ROsrpCntctVerfUoms</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.rtable.ROsrpContactMethods</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.rtable.ROsrpIpaTypes</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.rtable.ROsrpTier1RecTypes</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.rtable.ROsrpEvcTiers</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.rtable.ROsrpMrmPhases</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.rtable.ROsrpErrorQualifiers</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.rtable.ROsrpErrorTypes</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.rtable.RIncdntCenterTypes</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.rtable.ROsrpCmplncVerfMethods</class>
+
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RReviewItemResponseCodes</class>
+
+
+
+		<!--End of RTable Entities -->
+
+		<!-- plan entities -->
+
+		<class>gov.doi.tw.common.backend.model.entities.plan.PlanMagneticAnomalies</class>
+		<class>gov.doi.tw.common.backend.model.entities.plan.PlanSideScanSonarTargets</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RGeodeticDatumCodes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RProjZoneCodes</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RMagneticSignatureType</class>
+		<!--End of plan entities -->
+
+
+		<!-- ePermits Entities -->
+		<class>gov.doi.tw.common.backend.model.entities.osrp.ExtSubmittals</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.NcisNotifications</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.NcisNotificationParams</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.SubStatuses</class>
+
+		<class>gov.doi.tw.common.backend.model.entities.osrp.Osrp</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpAcp</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpSubmittalsXref</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpWcdCertifications</class>
+
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpLseFacilities</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpPlatformFacilities</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpPplFacilities</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpStatePipelines</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpStatePlatforms</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpStateWells</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpWellFacilities</class>
+
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpBooms</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpChemicalApplications</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpChemicals</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpEquipHub</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpEquipmentInventory</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpEquipSysCapbltyMeas</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpEquipSystems</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpEquipXref</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpLocations</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpOtherEquip</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpPowerUnits</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpSkimmers</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpStorageUnits</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpVessels</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpWildlifeRehabEquip</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpWcdScenario</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpWcdVolume</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpContractors</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpWcdCertScenarioXref</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpCoveredCompanies</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpWcdResponseEquip</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.sections.OsrpSection</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.sections.OsrpSectRegXref</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.sections.OsrpSubSection</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.sections.OsrpUserSectOrdering</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpSubmittalsView</class>
+
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpExerciseTypes</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpTec1OperExercises</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpTec2GiueExercises</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpTec3OgaExercises</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpTec1EquipCatgs</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpCorePlanComponents</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpGovPersonnel</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpExercCredits</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpCntctVerfPolicies</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpExercEquipSystem</class>
+
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpRfis</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpRfiResponses</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpAcpExtCntcts</class>
+
+
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpIncdntPrparednessAnalys</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpIpaSummaryFindings</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpIncdntNotifications</class>
+
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpPocVerifications</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpPocRevwDtls</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpWcdCertRevwDtls</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpMrmRevwDetails</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpTec4TrainingAudit</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpTrainingGroup</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpTrngVerification</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpTrngRevwsXref</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpMrmRevwRegsXref</class>
+
+
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpTier1RevwPrebrfInfo</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpTier2RevwDetails</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpTier2SuppChklsts</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpTier2PerfrmTests</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpTier1RecReviews</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.Tier1RecRevwResults</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpSuppVerfRslts</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpTier3EqpDeployments</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpAcpRevwSectsXref</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpAcpXwalkRevwDetails</class>
+
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpWcdRevwRegsXref</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpWcdCmplncRevwDtls</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpObjComplianceEval</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.rtable.RWcdRevwOutcomes</class>
+
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpCorrectiveAction</class>
+
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpNtls</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpWcdGdnceRevwDtls</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.reviews.OsrpWcdRevwNtlsXref</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpNtlSections</class>
+
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpAuditResults</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpRevisionQuesAnswers</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpRevisionQuesTemplate</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpSectionSubAttachXref</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpPlanFacility</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpWcdPlanFacilitiesXref</class>
+		<class>gov.doi.tw.common.backend.model.entities.PlanSitesView</class>
+		<class>gov.doi.tw.common.backend.model.entities.BaServices</class>
+		<class>gov.doi.tw.common.backend.model.entities.osrp.OsrpContractService</class>
+		<class>gov.doi.tw.common.backend.model.entities.BusProcessServTypeXref</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RBaRoleType</class>
+		<class>gov.doi.tw.common.backend.model.entities.BaContactRole</class>
+		<class>gov.doi.tw.common.backend.model.entities.BaRole</class>
+		<class>gov.doi.tw.common.backend.model.rtable.entities.RBusProcessCode</class>
+		<class>gov.doi.tw.common.backend.model.entities.BaEmployeesRqsts</class>
+
+		<shared-cache-mode>NONE</shared-cache-mode>
+
+		<properties>
+			<!-- <property name="eclipselink.logging.level" value="FINE"/> -->
+		</properties>
+
+	</persistence-unit>
+</persistence>

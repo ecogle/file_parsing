@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    
+	<persistence-unit name="gov.doi.tw.admin-unit" transaction-type="RESOURCE_LOCAL" >	 
+	    <!-- use weblogic provider -->   	    
+	    <!--  <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider> 	-->  	 	     
+	    <non-jta-data-source>jdbc/OCSDS</non-jta-data-source>
+	    <!-- Classes from shared tw-common-vaadin -->
+	    <class>gov.doi.tw.common.backend.model.entities.BaEmployees</class>
+	    <class>gov.doi.tw.common.backend.model.entities.BusinessAssociates</class>
+	    <class>gov.doi.tw.common.backend.model.entities.EdmsDocSubtypesMV</class>
+	    <class>gov.doi.tw.common.backend.model.entities.EdmsDocTypesMV</class>
+	    <class>gov.doi.tw.common.backend.model.entities.EntitlementGroup</class>
+	    <class>gov.doi.tw.common.backend.model.entities.EntitlementGroupMember</class>
+	    <class>gov.doi.tw.common.backend.model.entities.EntitlementGroupRole</class>
+	    <class>gov.doi.tw.common.backend.model.entities.EntitlementRole</class>
+	    <class>gov.doi.tw.common.backend.model.entities.ExternalPersonView</class>
+	    <class>gov.doi.tw.common.backend.model.entities.ExtUserEntitlementsView</class>
+	    <class>gov.doi.tw.common.backend.model.entities.ExtUserSecurityQuestions</class>
+	    <class>gov.doi.tw.common.backend.model.rtable.entities.RBaAcctLockReasonType</class>
+	    <class>gov.doi.tw.common.backend.model.rtable.entities.RBaAcctSecretQuestion</class>
+	    <class>gov.doi.tw.common.backend.model.rtable.entities.RSubTypeCodes</class>
+	    <class>gov.doi.tw.common.backend.model.entities.SubAttachmentTemplates</class>
+	    <class>gov.doi.tw.common.backend.model.entities.SubSignatureTemplates</class>
+	    <class>gov.doi.tw.common.backend.model.entities.TwPersonCompanyView</class>
+	    <class>gov.doi.tw.common.backend.model.entities.TwUserAccountsView</class>
+	    <class>gov.doi.tw.common.backend.model.rtable.entities.RAddressCategoryTypes</class>
+	    <class>gov.doi.tw.common.backend.model.rtable.entities.RPostalStCode</class>
+	    <class>gov.doi.tw.common.backend.model.review.entities.ReviewPerformers</class>
+	    <class>gov.doi.tw.common.backend.model.rtable.entities.RReviewPerformerTypes</class>
+	    <class>gov.doi.tw.common.backend.model.review.entities.ReviewType</class>
+	    <class>gov.doi.tw.common.backend.model.review.entities.ReviewDetailTemplate</class>
+	    <class>gov.doi.tw.common.backend.model.review.entities.SubReviewTypeXref</class>
+	    <class>gov.doi.tw.common.backend.model.rtable.entities.RRevwObjectTypes</class>
+	    <class>gov.doi.tw.common.backend.model.rtable.entities.RRevwObjectSubtypes</class>
+	    <class>gov.doi.tw.common.backend.model.rtable.entities.RReviewTypeClassCodes</class>
+	    <class>gov.doi.tw.common.backend.model.rtable.entities.RPlanAreaCodes</class>
+	    <class>gov.doi.tw.common.backend.model.rtable.entities.RRegionCodes</class>
+	    <class>gov.doi.tw.common.backend.model.rtable.entities.RBaEmployeeRelationType</class>
+	    <class>gov.doi.tw.common.backend.model.rtable.entities.RBaRoleType</class>
+	    <class>gov.doi.tw.common.backend.model.entities.BaEmployeeRole</class>
+	    <class>gov.doi.tw.common.backend.model.entities.BaRole</class>
+	    <class>gov.doi.tw.common.backend.model.entities.BaAccountSecInfo</class>
+	    <class>gov.doi.tw.common.backend.model.entities.BaUserAccounts</class>
+	   
+	   
+	    <!-- End classes from shared tw-common-vaadin -->
+	    
+	    <!-- Classes from admin-backend -->
+	    <class>gov.doi.tw.admin.backend.entities.InternalPersonView</class>
+	    <class>gov.doi.tw.admin.backend.entities.RPersonNamePrefixCode</class>
+	    <class>gov.doi.tw.admin.backend.entities.RPersonNameSuffixCode</class>
+	    <class>gov.doi.tw.admin.backend.entities.BaOrganization</class>
+	    <class>gov.doi.tw.admin.backend.entities.BaOrganizationJob</class>
+	    <class>gov.doi.tw.admin.backend.entities.BaAddresses </class>
+	    <class>gov.doi.tw.admin.backend.entities.RCountryName</class>
+	    <class>gov.doi.tw.admin.backend.entities.RAddressCategoryType</class>
+	    <class>gov.doi.tw.admin.backend.entities.RAddressType</class>
+	    <class>gov.doi.tw.admin.backend.entities.InternalOrganizationView</class>
+	    <class>gov.doi.tw.admin.backend.entities.RBaUserAcctType</class>
+	    <class>gov.doi.tw.admin.backend.entities.RBaCategoryType</class>
+	    <class>gov.doi.tw.admin.backend.entities.NcisRolesView</class>
+	    <class>gov.doi.tw.admin.backend.entities.RegionalEntitlement</class>
+	    <class>gov.doi.tw.admin.backend.entities.JobDescription</class>
+	    <class>gov.doi.tw.admin.backend.entities.NcisAcctStatusesTemp</class>
+  
+	    <!-- End Classes from admin-backend -->
+	    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+	    <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
+	    <properties>
+	    	<!-- <property name="eclipselink.logging.level" value="FINE"/> -->
+	    </properties>
+	</persistence-unit>
+</persistence>
